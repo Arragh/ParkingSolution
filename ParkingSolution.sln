@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingBL", "ParkingBL\ParkingBL.csproj", "{1372BD19-2D8A-4B48-AF71-2023286BE2DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingUI", "ParkingUI\ParkingUI.csproj", "{908C1380-0A2C-4A54-9702-DCA4AFA887FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1372BD19-2D8A-4B48-AF71-2023286BE2DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1372BD19-2D8A-4B48-AF71-2023286BE2DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1372BD19-2D8A-4B48-AF71-2023286BE2DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1372BD19-2D8A-4B48-AF71-2023286BE2DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{908C1380-0A2C-4A54-9702-DCA4AFA887FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908C1380-0A2C-4A54-9702-DCA4AFA887FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908C1380-0A2C-4A54-9702-DCA4AFA887FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908C1380-0A2C-4A54-9702-DCA4AFA887FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B358927-FE0F-4BAE-BF3D-E194458026D6}
+	EndGlobalSection
+EndGlobal
