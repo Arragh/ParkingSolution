@@ -9,9 +9,5 @@ namespace ParkingBL.Model
         public string Model { get; set; }
         public string Number { get; set; }
         public int ClientId { get; set; }
-        public override string ToString()
-        {
-            return Convert.ToString(Id);
-        }
     }
 }

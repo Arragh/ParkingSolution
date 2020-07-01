@@ -17,7 +17,7 @@ namespace ParkingUI
             dataGridView1.Columns[0].HeaderText = "Идентификатор";
             dataGridView1.Columns[1].HeaderText = "Марка";
             dataGridView1.Columns[2].HeaderText = "Модель";
-            dataGridView1.Columns[3].HeaderText = "Государственный номер";
+            dataGridView1.Columns[3].HeaderText = "Госномер";
             dataGridView1.Columns[4].HeaderText = "ID клиента";
             textBoxClient.ReadOnly = true;
         }
