@@ -29,5 +29,34 @@ namespace ParkingUI
         {
             Close();
         }
+
+        private void buttonDelete_Click(object sender, System.EventArgs e)
+        {
+            int id = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
+            Car car = db.Cars.Find(id);
+            if (car != null)
+            {
+                db.Cars.Remove(car);
+                db.SaveChanges();
+            }
+        }
+
+        private void buttonEdit_Click(object sender, System.EventArgs e)
+        {
+            int id = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
+            Car car = db.Cars.Find(id);
+            if (car != null)
+            {
+                AddCar form = new AddCar(car);
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    car.Brand = form.Car.Brand;
+                    car.Model = form.Car.Model;
+                    car.Number = form.Car.Number;
+                    car.ClientId = form.Car.ClientId;
+                    db.SaveChanges();
+                }
+            }
+        }
     }
 }
