@@ -14,6 +14,11 @@ namespace ParkingUI
             db = new ParkingContext();
             db.Clients.Load();
             dataGridView1.DataSource = db.Clients.Local.ToBindingList();
+            dataGridView1.Columns[0].HeaderText = "Идентификатор";
+            dataGridView1.Columns[1].HeaderText = "Фамилия";
+            dataGridView1.Columns[2].HeaderText = "Имя";
+            dataGridView1.Columns[3].HeaderText = "Отчество";
+
         }
 
         private void ClientForm_Load(object sender, EventArgs e)

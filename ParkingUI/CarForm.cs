@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Windows.Forms;
 using ParkingBL.Model;
 
@@ -13,6 +14,12 @@ namespace ParkingUI
             db = new ParkingContext();
             db.Cars.Load();
             dataGridView1.DataSource = db.Cars.Local.ToBindingList();
+            dataGridView1.Columns[0].HeaderText = "Идентификатор";
+            dataGridView1.Columns[1].HeaderText = "Марка";
+            dataGridView1.Columns[2].HeaderText = "Модель";
+            dataGridView1.Columns[3].HeaderText = "Государственный номер";
+            dataGridView1.Columns[4].HeaderText = "ID клиента";
+            textBoxClient.ReadOnly = true;
         }
 
         private void buttonAdd_Click(object sender, System.EventArgs e)
@@ -57,6 +64,14 @@ namespace ParkingUI
                     db.SaveChanges();
                 }
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int clientId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[4].Value);
+            Client client = db.Clients.Find(clientId);
+            string clientName = client.FirstName + " " + client.SecondName + " " + client.LastName;
+            textBoxClient.Text = clientName;
         }
     }
 }
