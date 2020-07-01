@@ -6,5 +6,6 @@ namespace ParkingBL.Model
     {
         public ParkingContext() : base("ParkingConnection") { }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Car> Cars { get; set; }
     }
 }

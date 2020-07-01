@@ -16,6 +16,12 @@ namespace ParkingUI
             form.Show();
         }
 
+        private void buttonBrowseCars_Click(object sender, EventArgs e)
+        {
+            CarForm form = new CarForm();
+            form.Show();
+        }
+
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Close();

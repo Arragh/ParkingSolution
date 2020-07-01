@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Car.cs" />
     <Compile Include="Model\ParkingContext.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

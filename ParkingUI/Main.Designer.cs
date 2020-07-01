@@ -57,6 +57,7 @@
             this.buttonBrowseCars.TabIndex = 1;
             this.buttonBrowseCars.Text = "Список машин";
             this.buttonBrowseCars.UseVisualStyleBackColor = true;
+            this.buttonBrowseCars.Click += new System.EventHandler(this.buttonBrowseCars_Click);
             // 
             // buttonExit
             // 
