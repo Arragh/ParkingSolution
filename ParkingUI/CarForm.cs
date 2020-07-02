@@ -77,7 +77,7 @@ namespace ParkingUI
             }
             else
             {
-                clientName = $"Клиент c id={clientId} не найден в базе";
+                clientName = "Клиент не найден в базе";
             }
             textBoxClient.Text = clientName;
         }
