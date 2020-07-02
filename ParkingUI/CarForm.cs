@@ -22,7 +22,7 @@ namespace ParkingUI
             textBoxClient.ReadOnly = true;
         }
 
-        private void buttonAdd_Click(object sender, System.EventArgs e)
+        private void buttonAdd_Click(object sender, EventArgs e)
         {
             AddCar form = new AddCar();
             if (form.ShowDialog() == DialogResult.OK)
@@ -32,12 +32,12 @@ namespace ParkingUI
             }
         }
 
-        private void buttonExit_Click(object sender, System.EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void buttonDelete_Click(object sender, System.EventArgs e)
+        private void buttonDelete_Click(object sender, EventArgs e)
         {
             int id = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
             Car car = db.Cars.Find(id);
@@ -48,7 +48,7 @@ namespace ParkingUI
             }
         }
 
-        private void buttonEdit_Click(object sender, System.EventArgs e)
+        private void buttonEdit_Click(object sender, EventArgs e)
         {
             int id = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
             Car car = db.Cars.Find(id);
@@ -70,7 +70,15 @@ namespace ParkingUI
         {
             int clientId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[4].Value);
             Client client = db.Clients.Find(clientId);
-            string clientName = client.FirstName + " " + client.SecondName + " " + client.LastName;
+            string clientName = "";
+            if (client != null)
+            {
+                clientName = client.FirstName + " " + client.SecondName + " " + client.LastName;
+            }
+            else
+            {
+                clientName = $"Клиент c id={clientId} не найден в базе";
+            }
             textBoxClient.Text = clientName;
         }
     }

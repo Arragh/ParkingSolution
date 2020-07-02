@@ -18,7 +18,6 @@ namespace ParkingUI
             dataGridView1.Columns[1].HeaderText = "Фамилия";
             dataGridView1.Columns[2].HeaderText = "Имя";
             dataGridView1.Columns[3].HeaderText = "Отчество";
-
         }
 
         private void ClientForm_Load(object sender, EventArgs e)
