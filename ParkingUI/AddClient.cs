@@ -8,12 +8,16 @@ namespace ParkingUI
     {
         public Client Client { get; set; }
 
+        // Конструктор для добавления нового клиента в базу
         public AddClient()
         {
             InitializeComponent();
         }
+
+        // Конструктор для редактирования имеющегося в базе клиента
         public AddClient(Client client) : this()
         {
+            // Передаем в поля textBox данные клиента client, переданного в конструктор
             textBoxFirstName.Text = client.FirstName;
             textBoxSecondName.Text = client.SecondName;
             textBoxLastName.Text = client.LastName;
@@ -21,9 +25,9 @@ namespace ParkingUI
 
         private void AddClient_Load(object sender, EventArgs e)
         {
-
         }
 
+        // Кнопка ОК
         private void buttonOK_Click(object sender, EventArgs e)
         {
             Client = new Client()
@@ -35,6 +39,7 @@ namespace ParkingUI
             Close();
         }
 
+        // Кнопка отмены
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
